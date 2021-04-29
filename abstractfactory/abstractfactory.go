@@ -10,6 +10,7 @@ type OrderDetailDAO interface {
 	SaveOrderDetail()
 }
 
+//DAOFactory DAO 抽象模式工厂接口
 type DAOFactory interface {
 	CreateOrderMainDAO() OrderMainDAO
 	CreateOrderDetailDAO() OrderDetailDAO

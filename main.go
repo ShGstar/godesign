@@ -1,6 +1,7 @@
 package main
 
 import (
+	bui "./builder"
 	fac "./factorymethod"
 	"fmt"
 )
@@ -25,6 +26,18 @@ func TestFactorymethodeasy() {
 	}
 }
 
+func TestBuilder() {
+	builder := &bui.Builder1{}
+	director := bui.NewDirector(builder)
+	director.Construct()
+	result := builder.GetResult()
+	if result != "123" {
+		fmt.Println("not 123")
+	}
+	fmt.Println(result)
+}
+
 func main() {
-	TestFactorymethodeasy()
+	//TestFactorymethodeasy()
+
 }
